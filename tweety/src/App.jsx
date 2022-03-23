@@ -3,10 +3,12 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { USERS_ROUTE, TWEETS_ROUTE } from './constants/routes';
 import { HomePage, NotFoundPage } from './pages';
+import { Header, Footer } from './components';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path={USERS_ROUTE} element={<div />} />
@@ -15,6 +17,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
