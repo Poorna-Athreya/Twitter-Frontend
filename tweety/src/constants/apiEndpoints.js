@@ -8,3 +8,8 @@ export const getTweetsForUser = (userId) => ({
   method: 'get',
   url: `/users/${userId}/tweets`,
 });
+
+export const addNewTweetsForUser = (userId) => ({
+  method: 'post',
+  url: `/users/${userId}/tweets`,
+});
