@@ -5,12 +5,15 @@
     padding-bottom: 2%;
 }
 .cross-btn{
-    background-color: red;
+    background-color: var(--card-bg-dark);
     float: right;
     border: none;
     width: 10%;
     height: 30px;
     color: white;
+}
+.cross-btn:hover{
+    background-color: red;
 }
 .new-tweet-box{
     padding-top: 2%;
@@ -24,6 +27,9 @@
     width: 30%;
     height: 50px;
     border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    color:white;
     background-color: #0080FF;
     margin-left: 9.5%;
 }

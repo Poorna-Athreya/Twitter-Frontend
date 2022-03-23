@@ -3,6 +3,7 @@
   --card-bg-dark: #a1a3a5;
   --accent-color: #0080FF;
   --accent-color-2: #192e70;
+  --light-text: rgb(141, 141, 141);
 }
 button{
   cursor: pointer;

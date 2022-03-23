@@ -28,8 +28,6 @@ function UserTweets() {
         <h1>
           {`${userDetails.name} (${userDetails.handle})`}
         </h1>
-        {/* Add New tweet component */}
-        {/* <AddNewTweet /> */}
         <button type="button" onClick={openModal} className="add-new-tweet-btn">
           Add New Tweet
         </button>

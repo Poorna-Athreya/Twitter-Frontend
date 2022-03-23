@@ -1,0 +1,16 @@
+.tweet{
+    padding:0.5%;
+    width:95%;
+    margin-left:1%;
+    background-color: var(--card-bg);
+    margin-top:0.25%;
+    margin-bottom:0.25%;
+}
+.tweet-timestamp{
+    text-align: right;
+    color: var(--light-text);
+}
+.tweet-text{
+    font-weight: 300;
+    margin-left: 1%;
+}
