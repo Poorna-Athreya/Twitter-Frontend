@@ -1,0 +1,36 @@
+.modal{
+    margin: 2%;
+    background-color: #DFDFDF;
+    width: 50%;
+    padding-bottom: 2%;
+}
+.cross-btn{
+    background-color: red;
+    float: right;
+    border: none;
+    width: 10%;
+    height: 30px;
+    color: white;
+}
+.new-tweet-box{
+    padding-top: 2%;
+    text-align: center;
+}
+.new-tweet-text-box{
+    width: 80%;
+    height: 100px;
+}
+.post-new-tweet{
+    width: 30%;
+    height: 50px;
+    border: none;
+    background-color: #0080FF;
+    margin-left: 9.5%;
+}
+@media screen and  (max-width:400px){
+    .modal{
+        width: 80%;
+        margin: 0px;
+        margin-top: 1%;
+    }
+}
