@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserCard.css';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { TWEETS_ROUTE, USERS_ROUTE } from '../../constants/routes';
@@ -12,7 +13,10 @@ function UserCard({
       <h1 className="user-name">{userName}</h1>
       <br />
       <div className="user-details">
-        <p className="user-handle">{userHandle}</p>
+        <p className="user-handle">
+          @
+          {userHandle}
+        </p>
         <p className="user-location">{location}</p>
       </div>
     </button>

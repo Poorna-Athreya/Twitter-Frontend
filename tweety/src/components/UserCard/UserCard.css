@@ -1,6 +1,20 @@
 .user-card{
+    margin-top:1%;
     width:300px;
     height:auto;
-    background-color: var(--accent-color);
-    /* color: var(); */
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 14px;
+}
+.user-card:hover{
+    background-color: var(--card-bg-dark);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.user-handle{
+    color: var(--accent-color-2);
+}
+@media screen and (max-width: 300px) {
+    .user-card{
+        margin-top: 0%;
+    }
 }
