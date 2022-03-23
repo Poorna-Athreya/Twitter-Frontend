@@ -11,3 +11,16 @@
     height: 50px;
     color: white;
 }
+@media screen and  (max-width:400px){
+    .tweets-top-bar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .add-new-tweet-btn{
+        width: 80%;
+    }
+    .new-tweet-modal{
+        display: flex;
+        justify-content: center;
+    }
+}

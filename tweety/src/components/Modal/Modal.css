@@ -27,3 +27,10 @@
     background-color: #0080FF;
     margin-left: 9.5%;
 }
+@media screen and  (max-width:400px){
+    .modal{
+        width: 80%;
+        margin: 0px;
+        margin-top: 1%;
+    }
+}

@@ -34,7 +34,7 @@ function UserTweets() {
           Add New Tweet
         </button>
       </div>
-      {showModal ? <Modal setShowModal={setShowModal} /> : null}
+      <div className="new-tweet-modal">{showModal ? <Modal setShowModal={setShowModal} /> : null}</div>
       <div />
       <div className="tweets-container">
         {tweetsDisplay}
