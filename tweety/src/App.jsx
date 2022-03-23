@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { USERS_ROUTE, TWEETS_ROUTE } from './components/constants/routes';
+import { USERS_ROUTE, TWEETS_ROUTE } from './constants/routes';
 import { HomePage, NotFoundPage } from './pages';
 
 function App() {
