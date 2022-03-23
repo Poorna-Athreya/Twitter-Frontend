@@ -1,4 +1,5 @@
 .user-card{
+    margin-top:1%;
     width:300px;
     height:auto;
     background-color: var(--card-bg);
@@ -11,4 +12,9 @@
 }
 .user-handle{
     color: var(--accent-color-2);
+}
+@media screen and (max-width: 300px) {
+    .user-card{
+        margin-top: 0%;
+    }
 }
