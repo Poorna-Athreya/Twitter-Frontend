@@ -1,14 +1,15 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useNavigate, useParams } from 'react-router-dom';
 import makeRequest from '../../utils/makeRequest';
 import { addNewTweetsForUser } from '../../constants/apiEndpoints';
 import './Modal.css';
+import { TWEETS_ROUTE, USERS_ROUTE } from '../../constants/routes';
 
 export default function Modal({ setShowModal }) {
   const [newTweet, setNewTweet] = useState('');
   const { userId } = useParams();
+  const navigate = useNavigate();
 
   const onChangeHandler = (e) => {
     setNewTweet(e.target.value);
@@ -16,14 +17,16 @@ export default function Modal({ setShowModal }) {
 
   const onClickHandler = (e) => {
     e.preventDefault();
-    makeRequest(addNewTweetsForUser(userId), { data: { text: `${newTweet}` } })
+    makeRequest(addNewTweetsForUser(userId), { data: { text: `${newTweet}` } }, navigate)
       .then((res) => {
-        setNewTweet(' ');
+        setNewTweet('');
+        console.log(res);
       }, []);
+    navigate(`${USERS_ROUTE}/${userId}${TWEETS_ROUTE}`);
   };
   return (
     <div className="modal">
-      <button type="button" onClick={() => setShowModal(false)} className="cross-btn">X</button>
+      <button type="button" onClick={() => setShowModal(() => false)} className="cross-btn">X</button>
       <div className="new-tweet-box">
         <h3>Add New Tweet</h3>
         <br />
@@ -34,3 +37,6 @@ export default function Modal({ setShowModal }) {
     </div>
   );
 }
+Modal.propTypes = {
+  setShowModal: PropTypes.bool.isRequired,
+};
