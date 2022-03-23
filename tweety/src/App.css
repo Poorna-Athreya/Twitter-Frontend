@@ -5,12 +5,12 @@
 button{
   cursor: pointer;
 }
-/* .App{
+.App{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height:100vh;
-} */
+}
 body{
   background-color: rgb(238, 236, 236)
 }
