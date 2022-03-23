@@ -6,5 +6,5 @@ export const getUsers = {
 };
 export const getTweetsForUser = (userId) => ({
   method: 'get',
-  url: `/tweets/${userId}`,
+  url: `/users/${userId}/tweets`,
 });

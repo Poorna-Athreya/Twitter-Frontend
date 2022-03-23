@@ -1,16 +1,29 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './UserTweets.css';
 import { useParams } from 'react-router-dom';
+import makeRequest from '../../utils/makeRequest';
+import { getUsers, getTweetsForUser } from '../../constants/apiEndpoints';
 import { ALL_USERS, USER_TWEETS } from '../../constants/users';
 import Tweet from '../Tweet';
 import Modal from '../Modal';
 
 function UserTweets() {
-  const { userId } = useParams();
-  const [userDetails, setUserDetails] = useState(ALL_USERS
-    .find((eachUser) => eachUser.id === parseInt(userId, 10)));
-  const [userTweets, setUserTweets] = useState(USER_TWEETS);
+  const params = useParams();
+  const { userId } = params;
+  const [userDetails, setUserDetails] = useState([]);
+  useEffect(() => {
+    makeRequest(getUsers).then((response) => {
+      setUserDetails(response.users.find((eachUser) => eachUser.id === parseInt(userId, 10)));
+    });
+  }, []);
+  const [userTweets, setUserTweets] = useState([]);
+  useEffect(() => {
+    makeRequest(getTweetsForUser(userId)).then((res) => {
+      setUserTweets(res.tweets);
+    });
+  });
+
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(true);
