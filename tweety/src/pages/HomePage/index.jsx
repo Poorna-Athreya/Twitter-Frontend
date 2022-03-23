@@ -4,7 +4,7 @@ import React from 'react';
 function HomePage() {
   return (
     <div className="home-page">
-      Home Page
+      Welcome to Tweety
     </div>
   );
 }

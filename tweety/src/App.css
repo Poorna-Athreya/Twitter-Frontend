@@ -1,5 +1,7 @@
 *{
   margin: 0px;
+  --card-bg: #DFDFDF;
+  --accent-color: #0080FF;
 }
 button{
   cursor: pointer;
