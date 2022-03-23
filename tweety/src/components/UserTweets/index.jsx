@@ -3,15 +3,16 @@ import React, { useState, useEffect } from 'react';
 import './UserTweets.css';
 import { useParams } from 'react-router-dom';
 import makeRequest from '../../utils/makeRequest';
-import { getUserEndpoint, getUserTweetsEndpoint } from '../../constants/apiEndpoints';
+import { getUsers, getTweetsForUser } from '../../constants/apiEndpoints';
 import { ALL_USERS, USER_TWEETS } from '../../constants/users';
 import Tweet from '../Tweet';
 import Modal from '../Modal';
 
 function UserTweets() {
-  const { userId } = useParams();
+  const params = useParams();
+  const { userId } = params;
   useEffect(() => {
-    makeRequest(getUserEndpoint).then((response) => console.log(response));
+    makeRequest(getUsers).then((response) => console.log(response));
   }, []);
   const [userDetails, setUserDetails] = useState(ALL_USERS
     .find((eachUser) => eachUser.id === parseInt(userId, 10)));

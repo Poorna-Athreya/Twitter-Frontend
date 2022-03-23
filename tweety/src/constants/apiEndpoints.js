@@ -1,11 +1,10 @@
 export const BACKEND_URL = 'http://localhost:3000';
-export const getUserEndpoint = {
+// export const TWEETS = '/users';
+export const getUsers = {
   method: 'get',
   url: '/users',
 };
-
-export const getUserTweetsEndpoint = (userId) => ({
+export const getTweetsForUser = (userId) => ({
   method: 'get',
   url: `/users/${userId}/tweets`,
-
 });

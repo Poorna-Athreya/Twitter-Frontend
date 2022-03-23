@@ -1,14 +1,17 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
-import { ALL_USERS } from '../../constants/users';
+import React, { useState, useEffect } from 'react';
 import UserCard from '../UserCard';
 import './AllUsers.css';
+import makeRequest from '../../utils/makeRequest';
+import { getUsers } from '../../constants/apiEndpoints';
 
 function AllUsers() {
-  const [allUsers, setAllUsers] = useState(ALL_USERS);
-  // setAllUsers(ALL_USERS);
+  const [allUsers, setAllUsers] = useState([]);
+  useEffect(() => {
+    makeRequest(getUsers).then((responseData) => {
+      setAllUsers(() => responseData.users);
+    });
+  }, []);
 
-  // const [isInitialised, setIsInitialised] = useState(false);
   const allUsersDisplay = allUsers.map((eachUser) => (
     <UserCard
       userName={eachUser.name}
