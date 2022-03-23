@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -12,12 +13,11 @@ export default function Modal({ setShowModal }) {
   const onChangeHandler = (e) => {
     setNewTweet(e.target.value);
   };
+
   const onClickHandler = (e) => {
     e.preventDefault();
     makeRequest(addNewTweetsForUser(userId), { data: { text: `${newTweet}` } })
       .then((res) => {
-        setNewTweet(res);
-        console.log(res);
         setNewTweet(' ');
       }, []);
   };
