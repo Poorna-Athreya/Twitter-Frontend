@@ -1,0 +1,29 @@
+.sync-button{
+    border-style: none;
+    background-color: var(--accent-color);
+    color:white;
+    border-radius: 25px;
+    padding: 5px;
+    width: 150px;
+    height:50px;
+    font-size: 30px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+}
+.homepage-main-para{
+    font-size: large;
+    font-weight: 200;
+}
+.sync-button:hover{
+    background-color: white;
+    color:#4c63AA
+}
+.root-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 720px;
+    font-size: 30px;
+    font-weight: 200;
+}
