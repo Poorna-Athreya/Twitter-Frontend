@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 function Tweet({ text, createdAt }) {
   return (
     <div className="tweet">
-      <p className="tweet-timestamp">{createdAt}</p>
       <h3 className="tweet-text">{text}</h3>
+      <p className="tweet-timestamp">{createdAt}</p>
     </div>
   );
 }

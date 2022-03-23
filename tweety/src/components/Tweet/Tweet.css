@@ -14,3 +14,10 @@
     font-weight: 300;
     margin-left: 1%;
 }
+
+@media screen and (max-width:500px) {
+    .tweet{
+        width: 70%;
+        align-self: center;
+    }
+}
