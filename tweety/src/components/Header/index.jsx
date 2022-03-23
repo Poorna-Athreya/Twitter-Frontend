@@ -1,10 +1,11 @@
 import React from 'react';
+import './Header.css';
 
 function Header() {
   return (
-    <div className="header">
-      Tweety
-    </div>
+    <header className="header">
+      <h1>Tweety</h1>
+    </header>
   );
 }
 export default Header;
