@@ -7,6 +7,7 @@ export default function Modal({ setShowModal }) {
       <button type="button" onClick={() => setShowModal(false)}>X</button>
       <h2>Add New Tweet</h2>
       <input type="text" />
+      <button type="submit">Post</button>
     </div>
   );
 }
