@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../Modal';
 
-export default function index() {
+export default function AddNewTweet() {
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(true);
