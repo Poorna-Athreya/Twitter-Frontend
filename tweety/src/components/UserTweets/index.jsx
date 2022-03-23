@@ -4,6 +4,7 @@ import './UserTweets.css';
 import { useParams } from 'react-router-dom';
 import { ALL_USERS, USER_TWEETS } from '../../constants/users';
 import Tweet from '../Tweet';
+import AddNewTweet from '../AddNewTweet';
 
 function UserTweets() {
   const { userId } = useParams();
@@ -25,6 +26,7 @@ function UserTweets() {
           {`${userDetails.name} (${userDetails.handle})`}
         </h1>
         {/* Add New tweet component */}
+        <AddNewTweet />
       </div>
       <div className="tweets-container">
         {tweetsDisplay}
