@@ -11,12 +11,19 @@ import Modal from '../Modal';
 function UserTweets() {
   const params = useParams();
   const { userId } = params;
+  const [userDetails, setUserDetails] = useState([]);
   useEffect(() => {
-    makeRequest(getUsers).then((response) => console.log(response));
+    makeRequest(getUsers).then((response) => {
+      setUserDetails(response.users.find((eachUser) => eachUser.id === parseInt(userId, 10)));
+    });
   }, []);
-  const [userDetails, setUserDetails] = useState(ALL_USERS
-    .find((eachUser) => eachUser.id === parseInt(userId, 10)));
-  const [userTweets, setUserTweets] = useState(USER_TWEETS);
+  const [userTweets, setUserTweets] = useState([]);
+  useEffect(() => {
+    makeRequest(getTweetsForUser(userId)).then((res) => {
+      setUserTweets(res.tweets);
+    });
+  });
+
   const [showModal, setShowModal] = useState(false);
   const openModal = () => {
     setShowModal(true);
