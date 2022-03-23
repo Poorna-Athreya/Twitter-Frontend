@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { USERS_ROUTE } from '../../constants/routes';
 import './HomePage.css';
 
 function HomePage() {
@@ -12,7 +13,7 @@ function HomePage() {
         className="sync-button"
         type="submit"
         onClick={() => {
-          navigate('/records');
+          navigate(USERS_ROUTE);
         }}
 
       >
