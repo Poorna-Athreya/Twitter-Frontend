@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import { ALL_USERS } from '../../constants/users';
 import UserCard from '../UserCard';
+import './AllUsers.css';
 
 function AllUsers() {
   const [allUsers, setAllUsers] = useState(ALL_USERS);
   // setAllUsers(ALL_USERS);
-  console.log('All users');
+
   // const [isInitialised, setIsInitialised] = useState(false);
   const allUsersDisplay = allUsers.map((eachUser) => (
     <UserCard
