@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { ALL_USERS } from '../../constants/users';
 import UserCard from '../UserCard';
 import './AllUsers.css';
+import makeRequest from '../../utils/makeRequest';
 
 function AllUsers() {
   const [allUsers, setAllUsers] = useState(ALL_USERS);
