@@ -10,17 +10,17 @@ export default function Modal({ setShowModal }) {
   const { userId } = useParams();
   const navigate = useNavigate();
 
-  const onChangeHandler = (e) => {
-    setNewTweet(e.target.value);
+  const onChangeHandler = (event) => {
+    setNewTweet(event.target.value);
   };
 
-  const onClickHandler = (e) => {
-    e.preventDefault();
+  const onPost = (event) => {
+    event.preventDefault();
     makeRequest(addNewTweetsForUser(userId), { data: { text: `${newTweet}` } }, navigate)
       .then(() => {
         setNewTweet('');
         setShowModal(false);
-      }, []);
+      });
     window.location.reload();
   };
   return (
@@ -32,7 +32,7 @@ export default function Modal({ setShowModal }) {
         <input data-testid="modalInput" type="text" value={newTweet} className="new-tweet-text-box" onChange={onChangeHandler} />
       </div>
       <br />
-      <button data-testid="modalSubmitButton" type="submit" className="post-new-tweet" onClick={onClickHandler}>Post</button>
+      <button type="submit" className="post-new-tweet" onClick={onPost}>Post</button>
     </div>
   );
 }
