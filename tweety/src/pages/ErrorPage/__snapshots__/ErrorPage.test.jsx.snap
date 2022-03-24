@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorPage should take a snapshot of ErrorPage 1`] = `
+<DocumentFragment>
+  <div
+    class="not-found"
+  >
+    Error ! Something Went Wrong!
+  </div>
+</DocumentFragment>
+`;

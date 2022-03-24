@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllUsersPage should take a snapshot of AllUsersPage 1`] = `
+<DocumentFragment>
+  <div
+    class="all-users-page"
+  >
+    <div
+      class="users-container"
+    />
+  </div>
+</DocumentFragment>
+`;
