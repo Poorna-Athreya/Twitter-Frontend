@@ -4,7 +4,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import makeRequest from '../../utils/makeRequest';
 import { addNewTweetsForUser } from '../../constants/apiEndpoints';
 import './Modal.css';
-import { TWEETS_ROUTE, USERS_ROUTE } from '../../constants/routes';
 
 export default function Modal({ setShowModal }) {
   const [newTweet, setNewTweet] = useState('');
@@ -18,11 +17,11 @@ export default function Modal({ setShowModal }) {
   const onClickHandler = (e) => {
     e.preventDefault();
     makeRequest(addNewTweetsForUser(userId), { data: { text: `${newTweet}` } }, navigate)
-      .then((res) => {
+      .then(() => {
         setNewTweet('');
-        console.log(res);
+        setShowModal(false);
       }, []);
-    navigate(`${USERS_ROUTE}/${userId}${TWEETS_ROUTE}`);
+    window.location.reload();
   };
   return (
     <div className="modal">
