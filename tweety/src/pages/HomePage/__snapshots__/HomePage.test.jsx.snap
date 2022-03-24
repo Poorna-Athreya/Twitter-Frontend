@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage should take a snapshot of HomePage 1`] = `
+<DocumentFragment>
+  <div
+    class="root-container"
+  >
+    <p
+      class="hompage-main-para"
+    >
+       Welcome to Tweety
+    </p>
+    <button
+      class="sync-button"
+      type="submit"
+    >
+      users
+    </button>
+  </div>
+</DocumentFragment>
+`;

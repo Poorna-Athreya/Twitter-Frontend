@@ -24,3 +24,6 @@ yarn-error.log*
 
 #Ignore vscode 
 .vscode
+
+#Ignore testCases
+testCases.txt
