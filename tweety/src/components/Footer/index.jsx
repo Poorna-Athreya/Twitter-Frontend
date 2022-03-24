@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer">
-      <p>copyright@2022</p>
+      <p data-testid="footerText">copyright@2022</p>
     </footer>
   );
 }
