@@ -20,7 +20,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/Bad-Request" element={<ErrorPage errorName="Bad Request!" errorCode="404" />} />
           <Route path="/Server-Error" element={<ErrorPage errorName="Internal Server Error!" errorCode="500" />} />
-          <Route path="/Something-Wrong" element={<ErrorPage errorName="Something went Wrong!" errorCode="500" />} />
+          <Route path="/Something-Wrong" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

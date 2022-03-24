@@ -14,10 +14,11 @@ function ErrorPage({ errorName, errorCode }) {
   );
 }
 ErrorPage.propTypes = {
-  errorName: PropTypes.string.isRequired,
+  errorName: PropTypes.string,
   errorCode: PropTypes.string,
 };
 ErrorPage.defaultProps = {
+  errorName: 'Something Went Wrong!',
   errorCode: '',
 };
 export default ErrorPage;

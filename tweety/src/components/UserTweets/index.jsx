@@ -22,7 +22,7 @@ function UserTweets() {
   const [userTweets, setUserTweets] = useState([]);
   useEffect(() => {
     makeRequest(getTweetsForUser(userId), {}, navigate).then((res) => {
-      setUserTweets(res.tweets);
+      setUserTweets(() => res.tweets);
     });
   }, []);
 

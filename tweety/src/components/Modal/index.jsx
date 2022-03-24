@@ -37,5 +37,5 @@ export default function Modal({ setShowModal }) {
   );
 }
 Modal.propTypes = {
-  setShowModal: PropTypes.bool.isRequired,
+  setShowModal: PropTypes.func.isRequired,
 };
