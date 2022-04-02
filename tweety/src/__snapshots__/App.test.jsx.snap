@@ -40,11 +40,13 @@ exports[`app should take a snapshot for App 1`] = `
     >
       <p
         class="hompage-main-para"
+        data-testid="homepageText"
       >
          Welcome to Tweety
       </p>
       <button
         class="sync-button"
+        data-testid="homepageButton"
         type="submit"
       >
         users

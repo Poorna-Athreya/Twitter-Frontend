@@ -7,15 +7,14 @@ function HomePage() {
   const navigate = useNavigate();
   return (
     <div className="root-container">
-      <p className="hompage-main-para"> Welcome to Tweety</p>
-
+      <p data-testid="homepageText" className="hompage-main-para"> Welcome to Tweety</p>
       <button
+        data-testid="homepageButton"
         className="sync-button"
         type="submit"
         onClick={() => {
           navigate(USERS_ROUTE);
         }}
-
       >
         users
       </button>

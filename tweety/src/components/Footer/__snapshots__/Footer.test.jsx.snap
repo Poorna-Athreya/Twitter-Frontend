@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should take a snapshot for Footer 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+  >
+    <p
+      data-testid="footerText"
+    >
+      copyright@2022
+    </p>
+  </footer>
+</DocumentFragment>
+`;

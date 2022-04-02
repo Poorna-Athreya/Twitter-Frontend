@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
 import UserCard from '../UserCard';
 import './AllUsers.css';
-import makeRequest from '../../utils/makeRequest';
-import { getUsers } from '../../constants/apiEndpoints';
 
-function AllUsers() {
-  const navigate = useNavigate();
-  const [allUsers, setAllUsers] = useState([]);
-  useEffect(() => {
-    makeRequest(getUsers, {}, navigate).then((responseData) => {
-      setAllUsers(() => responseData.users);
-    });
-  }, []);
-
+function AllUsers({ allUsers }) {
   const allUsersDisplay = allUsers.map((eachUser) => (
     <UserCard
       userName={eachUser.name}
@@ -24,9 +14,21 @@ function AllUsers() {
     />
   ));
   return (
-    <div className="users-container">
+    <div data-testid="userContainer" className="users-container">
       {allUsersDisplay}
     </div>
   );
 }
+
+AllUsers.propTypes = {
+  allUsers: PropTypes.arrayOf(PropTypes.shape(
+    {
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      handle: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+    },
+  )).isRequired,
+};
+
 export default AllUsers;

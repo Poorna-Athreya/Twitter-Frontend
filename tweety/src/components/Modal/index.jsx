@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate, useParams } from 'react-router-dom';
-import makeRequest from '../../utils/makeRequest';
-import { addNewTweetsForUser } from '../../constants/apiEndpoints';
 import './Modal.css';
 
-export default function Modal({ setShowModal }) {
+export default function Modal({ setShowModal, modalSubmitHandler }) {
   const [newTweet, setNewTweet] = useState('');
-  const { userId } = useParams();
-  const navigate = useNavigate();
 
   const onChangeHandler = (event) => {
     setNewTweet(event.target.value);
@@ -16,12 +11,8 @@ export default function Modal({ setShowModal }) {
 
   const onPost = (event) => {
     event.preventDefault();
-    makeRequest(addNewTweetsForUser(userId), { data: { text: `${newTweet}` } }, navigate)
-      .then(() => {
-        setNewTweet('');
-        setShowModal(false);
-      });
-    window.location.reload();
+    modalSubmitHandler(newTweet);
+    setNewTweet('');
   };
   return (
     <div className="modal">
@@ -32,10 +23,11 @@ export default function Modal({ setShowModal }) {
         <input data-testid="modalInput" type="text" value={newTweet} className="new-tweet-text-box" onChange={onChangeHandler} />
       </div>
       <br />
-      <button type="submit" className="post-new-tweet" onClick={onPost}>Post</button>
+      <button data-testid="modalSubmitButton" type="submit" className="post-new-tweet" onClick={onPost}>Post</button>
     </div>
   );
 }
 Modal.propTypes = {
   setShowModal: PropTypes.func.isRequired,
+  modalSubmitHandler: PropTypes.func.isRequired,
 };

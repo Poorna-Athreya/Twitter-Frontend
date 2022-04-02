@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should take a snapshot for Modal 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <button
+      class="cross-btn"
+      data-testid="modalCloseButton"
+      type="button"
+    >
+      X
+    </button>
+    <div
+      class="new-tweet-box"
+    >
+      <h3
+        data-testid="modalHeading"
+      >
+        Add New Tweet
+      </h3>
+      <br />
+      <input
+        class="new-tweet-text-box"
+        data-testid="modalInput"
+        type="text"
+        value=""
+      />
+    </div>
+    <br />
+    <button
+      class="post-new-tweet"
+      data-testid="modalSubmitButton"
+      type="submit"
+    >
+      Post
+    </button>
+  </div>
+</DocumentFragment>
+`;
