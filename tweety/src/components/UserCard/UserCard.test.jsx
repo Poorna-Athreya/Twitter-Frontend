@@ -15,6 +15,10 @@ describe('UserCard', () => {
   beforeEach(() => {
     render(<UserCard userName={mockUserCardName} userHandle={mockUserCardHandle} location={mockUserCardLocation} id={mockUserCardId} />);
   });
+  it('should take a snapshot for UserCard', () => {
+    const { asFragment } = render(<UserCard userName={mockUserCardName} userHandle={mockUserCardHandle} location={mockUserCardLocation} id={mockUserCardId} />);
+    expect(asFragment(<UserCard userName={mockUserCardName} userHandle={mockUserCardHandle} location={mockUserCardLocation} id={mockUserCardId} />)).toMatchSnapshot();
+  });
   it('should have the required elements when UserCard is rendered', () => {
     expect(screen.getByTestId('userCardName')).toBeTruthy();
     expect(screen.getByText(mockUserCardName)).toBeTruthy();
@@ -24,7 +28,7 @@ describe('UserCard', () => {
     expect(screen.getByText(mockUserCardLocation)).toBeTruthy();
     expect(screen.queryByTestId('userCardButton')).toBeTruthy();
   });
-  it('should call mockNavigate function when the button is clicked', () => {
+  it('should call mockNavigate function with the correct route value when the button is clicked', () => {
     fireEvent.click(screen.getByTestId('userCardButton'));
     expect(mockNavigate).toHaveBeenCalledWith(`${USERS_ROUTE}/${mockUserCardId}${TWEETS_ROUTE}`);
   });

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tweets should take a snapshot for Tweets 1`] = `
+<DocumentFragment>
+  <div
+    class="tweet"
+  >
+    <h3
+      class="tweet-text"
+      data-testid="tweetText"
+    >
+      Great Project!
+    </h3>
+    <p
+      class="tweet-timestamp"
+      data-testid="tweetCreatedAt"
+    >
+      2022-03-23T16:39:08.227Z
+    </p>
+  </div>
+</DocumentFragment>
+`;

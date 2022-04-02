@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function ErrorPage({ errorName, errorCode }) {
   return (
-    <div className="not-found">
+    <div data-testid="errorText" className="not-found">
       Error
       {' '}
       {errorCode}

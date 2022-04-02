@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllUsers should take a snapshot for AllUsers 1`] = `
+<DocumentFragment>
+  <div
+    class="users-container"
+    data-testid="userContainer"
+  >
+    <button
+      aria-label="user-card-button"
+      class="user-card"
+      data-testid="userCardButton"
+      type="button"
+    >
+      <h1
+        class="user-name"
+        data-testid="userCardName"
+      >
+        Twitter Dev
+      </h1>
+      <br />
+      <div
+        class="user-details"
+      >
+        <p
+          class="user-handle"
+          data-testid="userCardHandle"
+        >
+          @TwitterDev
+        </p>
+        <p
+          class="user-location"
+          data-testid="userCardLocation"
+        >
+          Internet
+        </p>
+      </div>
+    </button>
+    <button
+      aria-label="user-card-button"
+      class="user-card"
+      data-testid="userCardButton"
+      type="button"
+    >
+      <h1
+        class="user-name"
+        data-testid="userCardName"
+      >
+        Lorem Ipsum
+      </h1>
+      <br />
+      <div
+        class="user-details"
+      >
+        <p
+          class="user-handle"
+          data-testid="userCardHandle"
+        >
+          @LoremIpsum
+        </p>
+        <p
+          class="user-location"
+          data-testid="userCardLocation"
+        >
+          Internet
+        </p>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;

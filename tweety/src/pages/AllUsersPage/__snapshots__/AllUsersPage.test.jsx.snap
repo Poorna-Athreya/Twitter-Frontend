@@ -7,6 +7,7 @@ exports[`AllUsersPage should take a snapshot of AllUsersPage 1`] = `
   >
     <div
       class="users-container"
+      data-testid="userContainer"
     />
   </div>
 </DocumentFragment>

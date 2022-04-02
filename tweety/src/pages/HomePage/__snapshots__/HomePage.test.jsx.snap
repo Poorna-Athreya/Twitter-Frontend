@@ -7,11 +7,13 @@ exports[`HomePage should take a snapshot of HomePage 1`] = `
   >
     <p
       class="hompage-main-para"
+      data-testid="homepageText"
     >
        Welcome to Tweety
     </p>
     <button
       class="sync-button"
+      data-testid="homepageButton"
       type="submit"
     >
       users
