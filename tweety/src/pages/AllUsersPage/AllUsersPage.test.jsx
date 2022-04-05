@@ -2,7 +2,6 @@ import React from 'react';
 import {
   render, screen,
 } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
 import AllUsersPage from './index';
 
 const mockNavigate = jest.fn();
@@ -34,9 +33,7 @@ describe('AllUsersPage', () => {
     expect(asFragment(<AllUsersPage />)).toMatchSnapshot();
   });
   it('should render all the user details when the page is loaded', async () => {
-    act(() => {
-      render(<AllUsersPage />);
-    });
+    render(<AllUsersPage />);
     expect(await screen.findAllByText('Twitter Dev')).toBeTruthy();
     expect(await screen.findAllByText('@TwitterDev')).toBeTruthy();
     expect(await screen.findAllByText('Internet')).toBeTruthy();

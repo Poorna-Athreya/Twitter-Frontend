@@ -2,6 +2,7 @@ import React from 'react';
 import {
   render, screen, fireEvent,
 } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import UserTweetsPage from './index';
 import { USERS_ROUTE } from '../../constants/routes';
 
@@ -66,7 +67,9 @@ jest.mock('../../utils/makeRequest/', () => (apiEndpoint) => {
 
 describe('UserTweetsPage', () => {
   beforeEach(() => {
-    render(<UserTweetsPage />);
+    act(() => {
+      render(<UserTweetsPage />);
+    });
   });
   it('should take a snapshot of UserTweetsPage', () => {
     const { asFragment } = render(<UserTweetsPage />);

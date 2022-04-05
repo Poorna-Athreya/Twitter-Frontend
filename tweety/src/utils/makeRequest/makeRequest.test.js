@@ -54,4 +54,8 @@ describe('makeRequest', () => {
     expect(mockNavigate).toHaveBeenCalledTimes(1);
     expect(mockNavigate).toHaveBeenCalledWith('/Something-Wrong');
   });
+  it('should return an empty array if the apiEndpoint is empty', async () => {
+    const response = await makeRequest();
+    expect(response).toStrictEqual([]);
+  });
 });
